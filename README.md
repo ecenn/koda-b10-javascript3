@@ -5,8 +5,8 @@ Membuat program javascript untuk mendalami materi for dan while loop.
 ## Latihan Soal
 
 ```js
-
 // Soal 1
+
 // * * * * * 
 // * * * * * 
 // * * * * * 
