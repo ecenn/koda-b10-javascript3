@@ -55,7 +55,7 @@ d --false--> z
 
 ```mermaid
 
-flowchart TD
+flowchart LR
 
 start((start))
 init_y[y = 0]
