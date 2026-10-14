@@ -2,8 +2,6 @@
 
 Membuat program javascript untuk mendalami materi for dan while loop.
 
----
-
 ## Soal 1
 
 ```js
@@ -46,7 +44,6 @@ k --> c
 c --false--> z
 
 ```
----
 
 ## Soal 2
 
@@ -93,8 +90,6 @@ out_row --> inc_y
 inc_y --> check_y
 
 ```
-
----
 
 ## Soal 3
 
@@ -143,8 +138,6 @@ check_z --false--> out_row --> dec_y
 dec_y --> check_y
 
 ```
-
----
 
 ## Soal 4
 
