@@ -2,18 +2,22 @@
 
 Membuat program javascript untuk mendalami materi for dan while loop.
 
-## Latihan Soal
+---
+
+## Soal 1
 
 ```js
-// Soal 1
-
-// * * * * * 
-// * * * * * 
-// * * * * * 
-// * * * * * 
-// * * * * * 
+// Output:
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
+* * * * * 
 ```
 
+[Link to Solution 1](index.js)
+
+### Flowchart
 ```mermaid
 
 flowchart LR
@@ -42,16 +46,22 @@ k --> c
 c --false--> z
 
 ```
+---
+
+## Soal 2
 
 ```js
-// Soal 2
-
-// * 
-// * * 
-// * * * 
-// * * * * 
-// * * * * * 
+// Output:
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
 ```
+
+[Link to Solution 2](index2.js)
+
+### Flowchart
 
 ```mermaid
 
@@ -81,5 +91,101 @@ inc_x --> check_x
 check_x --false--> out_row
 out_row --> inc_y
 inc_y --> check_y
+
+```
+
+---
+
+## Soal 3
+
+```js
+// Output
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+```
+
+[Link to Solution 3](index3.js)
+
+### Flowchart
+
+```mermaid
+
+flowchart LR
+
+start((start))
+space[space = '' '']
+star[star = ''*'']
+row[row='''']
+y[y = 5]
+check_y{y > 0}
+dec_y[y--]
+x[x = 0]
+check_x{x <= y - 1}
+inc_x[x++]
+z[z = 0]
+check_z{z < 5 - y}
+inc_z[z++]
+add_space[row += space]
+add_star[row += star + space]
+out_row[/row/]
+stop(((stop)))
+
+start --> space --> star --> y --> row --> check_y
+check_y --true--> x --> check_x
+check_y --false--> stop
+check_x --true--> add_space --> inc_x
+check_x --false--> z --> check_z
+check_z --true--> add_star --> inc_z
+check_z --false--> out_row --> dec_y
+dec_y --> check_y
+
+```
+
+---
+
+## Soal 4
+
+```js
+// Output:
+* * * * * 
+*       *
+*       *
+*       *
+* * * * * 
+```
+
+[Link to Solution 4](index4.js)
+
+### Flowchart
+
+```mermaid
+
+flowchart LR
+
+start((start))
+n[/n/]
+y[y = 0]
+checkY{y < n}
+row[row = '''']
+x[x = 0]
+checkX{x < n}
+ifX{x == 0 or x == n - 1 or y == 0 or y == n - 1}
+star[row += ''*'']
+space[row += '' '']
+incX[x++]
+incY[y++]
+out_row[/row/]
+stop(((stop)))
+
+start --> n --> y --> checkY
+checkY --true--> row --> x --> checkX
+checkY --false--> stop
+checkX --true--> ifX
+ifX --true--> star --> incX
+ifX --false--> space --> incX
+incX --> checkX --false--> out_row --> incY --> checkY
 
 ```
