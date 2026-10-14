@@ -42,3 +42,44 @@ k --> d
 d --false--> z
 
 ```
+
+```js
+// Soal 2
+
+// * 
+// * * 
+// * * * 
+// * * * * 
+// * * * * * 
+```
+
+```mermaid
+
+flowchart TD
+
+start((start))
+init_y[y = 0]
+check_y{y < 5}
+init_row[row = '' '']
+init_x[x = 0]
+check_x{x <= y}
+inc_row[row += ''* '']
+inc_x[x++]
+out_row[/row/]
+inc_y[y++]
+stop(((stop)))
+
+start --> init_y
+init_y --> check_y
+check_y --false--> stop
+check_y --true--> init_row
+init_row --> init_x
+init_x --> check_x
+check_x --true--> inc_row
+inc_row --> inc_x
+inc_x --> check_x
+check_x --false--> out_row
+out_row --> inc_y
+inc_y --> check_y
+
+```
