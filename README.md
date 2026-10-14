@@ -20,7 +20,7 @@ flowchart LR
 
 a((start))
 b[i = 0]
-c[/"console.log(''* ''.repeat())"/]
+c["''* ''.repeat(5)"]
 d{i < 5}
 e[i++]
 z(((stop)))
@@ -28,8 +28,8 @@ z(((stop)))
 a --> b
 b --> c
 c --> d
-d --no--> e
-d --yes--> z
+d --true--> e
+d --false--> z
 e --> c
 ```
 
