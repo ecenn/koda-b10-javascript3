@@ -34,13 +34,11 @@ z(((stop)))
 a --> b --> c --> d
 d --true--> e --> f
 f --true--> g
-g --> h
-h --> i
-i --> j
+g --> j
 j --> f
-f --false--> k
+f --false--> h
+h --> i --> k
 k --> d
 d --false--> z
-
 
 ```
