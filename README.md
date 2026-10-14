@@ -19,27 +19,27 @@ Membuat program javascript untuk mendalami materi for dan while loop.
 flowchart LR
 
 a((start))
-b[temp = '''']
-c[x = 0]
-d{x < 5}
+b[x = 0]
+c{x < 5}
+d[temp = '''']
 e[i = 0]
 f{i < 5}
 g[temp += ''* '']
 h[/temp/]
-i[temp = '''']
 j[i++]
 k[x++]
 z(((stop)))
 
-a --> b --> c --> d
-d --true--> e --> f
+a --> b --> c
+c --true--> d
+d --> e --> f
 f --true--> g
 g --> j
 j --> f
 f --false--> h
-h --> i --> k
-k --> d
-d --false--> z
+h --> k
+k --> c
+c --false--> z
 
 ```
 
